@@ -22,10 +22,21 @@ policy/                  앱별 정책·지원 페이지 (구 torchnn/policies �
 | 리얼리치 | https://torchnn.github.io/policy/real-rich/privacy.html | .../support.html |
 | 밤티 맵 | https://torchnn.github.io/policy/bamti-map/privacy.html | .../support.html |
 | 프로의포폴 | https://torchnn.github.io/policy/portfolio-review/privacy.html | .../support.html |
+| 이달의 산 | https://torchnn.github.io/policy/monthly-mountains/privacy.html | .../support.html |
+| 포토식스 | https://torchnn.github.io/policy/photo-six/privacy.html | .../support.html |
+| 판세 | https://torchnn.github.io/policy/fun-chart/privacy.html | .../support.html |
+| 기영차트 | https://torchnn.github.io/policy/giyeong-chart/privacy.html | .../support.html |
+| 땅따 | https://torchnn.github.io/policy/ddang-dda/privacy.html | .../support.html |
 
 ## 새 앱 추가
 1. `policy/<앱-slug>/` 에 index·privacy·support.html 추가(기존 앱 복사 후 교체).
 2. `policy/index.html` 허브에 카드 한 장 추가.
-3. commit & push → 1~2분 뒤 Pages 반영.
+3. 이 README 의 URL 표에 행 추가.
+4. commit & push → 1~2분 뒤 Pages 반영.
+5. **라이브 확인** — Pages 는 조용히 404 를 낸다:
+   ```bash
+   curl -s -o /dev/null -w '%{http_code}\n' https://torchnn.github.io/policy/<slug>/privacy.html
+   ```
+   200 이 아니면 App Store Connect 에 넣지 말 것.
 
 새 광고 파트너(미디에이션) 추가 시 `app-ads.txt` 에 라인만 더하면 전 앱에 적용된다.
